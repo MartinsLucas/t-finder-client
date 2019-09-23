@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+
+  client:
+    container_name: t-finder-client
+    build: .
+    volumes:
+      - .:/t-finder-client
+      - ./node_modules:/t-finder-client/node_modules
+    networks:
+      - falko-backend
+    ports:
+      - 8000:8000
+
+volumes:
+  postgres-data: {}
+
+networks:
+  falko-backend:
+    external: true
