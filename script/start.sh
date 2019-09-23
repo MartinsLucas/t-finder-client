@@ -1,3 +1,3 @@
 yarn install
 
-yarn build:pwa
+yarn dev:pwa
